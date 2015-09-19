@@ -44,6 +44,17 @@
         android:layout_alignParentStart="true"
         android:id="@+id/frameLayout">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_logo"
+            android:scaleType="centerInside"
+            android:src="@drawable/ahs_logo"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/frameLayout"
+            android:layout_alignEnd="@+id/frameLayout" />
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
@@ -120,17 +131,6 @@
                 android:text="ที่ปรึกษาร่วม : นาย ศิวเวศวร์ วงษ์เจริญ"
                 android:textStyle="bold|normal" />
         </LinearLayout>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/image_logo"
-            android:scaleType="centerInside"
-            android:src="@drawable/ahs_logo"
-            android:layout_gravity="center_horizontal|top"
-            android:layout_alignParentTop="true"
-            android:layout_alignRight="@+id/frameLayout"
-            android:layout_alignEnd="@+id/frameLayout" />
 
 
     </FrameLayout>
