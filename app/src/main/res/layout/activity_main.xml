@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button"
+        android:id="@+id/frameLayout2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:id="@+id/imageView" />
+
+        <com.example.toshiba.pcv_project.LineTouchView
+            android:id="@+id/vLineTouchView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linearLayout"
+            android:layout_alignEnd="@+id/linearLayout"
+            android:layout_alignParentStart="true" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="activeLine"
+            android:text="Line 1"
+            android:textStyle="bold|normal" />
+
+        <Button
+            android:id="@+id/btnLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="activeLine"
+            android:text="Line 2"
+            android:textStyle="bold|normal" />
+
+        <Button
+            android:id="@+id/btnLine3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="activeLine"
+            android:text="Line 3"
+            android:textStyle="bold|normal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cal"
+            android:id="@+id/btnCal"
+            android:onClick="cal"
+            android:textStyle="bold|normal" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take Picture"
+        android:id="@+id/button"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold|normal"
+        android:layout_toStartOf="@+id/button_zoom"
+        android:layout_toLeftOf="@+id/button_zoom" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zoom"
+        android:id="@+id/button_zoom"
+        android:textStyle="bold|normal"
+        android:layout_above="@+id/linearLayout"
+        android:layout_toLeftOf="@+id/button_save"
+        android:layout_toStartOf="@+id/button_save" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/button_save"
+        android:textStyle="bold|normal"
+        android:layout_below="@+id/frameLayout2"
+        android:layout_alignRight="@+id/frameLayout2"
+        android:layout_alignEnd="@+id/frameLayout2" />
+
+</RelativeLayout>
