@@ -10,7 +10,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start"
+        android:text="เริ่มต้นการทำงาน"
         android:id="@+id/button_start"
         android:layout_above="@+id/button_manual"
         android:layout_alignParentLeft="true"
@@ -23,7 +23,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Manual"
+        android:text="คู่มือการใช้งาน"
         android:id="@+id/button_manual"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -110,7 +110,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="นิสิตผู้ทำวิจัยงาน นาย ภัทรพงษ์ ผลาผล 55662050"
+                android:text="นิสิตผู้ทำวิจัยงาน นาย ภัทรพงษ์ ผลาผล 55662111"
                 android:textStyle="bold|normal" />
             <TextView
                 android:layout_width="wrap_content"
