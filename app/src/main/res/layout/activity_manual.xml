@@ -6,69 +6,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.toshiba.pcv_project.ManualActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/scrollView2" />
-
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="วิธีการใช้แอพพลิเคชั่น
-        "
-        android:textStyle="bold|normal"
-            android:textSize="20dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="1. เมื่อเข้าใช้งานแอพพลิเคชั่นวัดปริมาณเม็ดเลือดแดงอัดแน่นแล้ว จะปรากฏหน้ากล้องถ่ายภาพ ให้ผู้ใช้งานถ่ายภาพ haematocrit tube ที่ต้องการวัด
-            "
-            android:textStyle="bold|normal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="2. เมื่อกดถ่ายรูป รูปที่ได้จะไปแสดงผลบนหน้าจอของแอพพลิเคชั่น จากนั้นผู้ใช้งานต้องทำการลากเส้นกำหนดจุดที่จะวัดโดย จะมีเส้นที่ผู้ใช้งานต้องลากทั้งหมด 3 เส้น คือ line1 , line2 , line3 ตามลำดับ โดยกำหนดจุดของแต่ละเส้นดังนี้
-Line1 เมื่อกดปุ่มจะมีเส้นปรากฏขึ้นบนหน้าจอ ให้ผู้ใช้งานลากเส้นนั้นไปอยู่ระหว่าง ขอบของดินน้ำมันและเม็ดเลือดแดง จากนั้นกดปุ่ม line 2
-	Line 2 เมื่อกดปุ่มจะมีเส้นปรากฏขึ้นบนหน้าจอ ให้ผู้ใช้งานลากเส้นนั้นไปอยู่ระหว่าง ขอบของพลาสม่าและอากาศ จากนั้นกดปุ่ม line 3
-	Line 3 เมื่อกดปุ่มจะมีเส้นปรากฏขึ้นบนหน้าจอ ให้ผู้ใช้งานลากเส้นนั้นไปอยู่ระว่าง ขอบของเม็ดเลือดแดงและส่วนสีขาว (เม็ดเลือดขาวและเกล็ดเลือด)
-"
-            android:textStyle="bold|normal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="3. เมื่อกำหนดจุดครบทั้ง 3 เส้น ให้ผู้ใช้งานกดปุ่ม คำนวณค่า จะปรากฏค่าปริมาณเม็ดเลือดแดงอัดแน่นขึ้นบนหน้าจอ
-            "
-            android:textStyle="bold|normal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="4. ผู้ใช้งานสามารถกดปุ่ม save เพื่อบันทึกภาพ พร้อมค่า ปริมาณเม็ดเลือดแดงอัดแน่น เพื่อเก็บเป็นข้อมูลได้
-          "
-            android:textStyle="bold|normal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="5. หากผู้ใช้งานต้องการวัดค่าซ้ำหรือ วัดค่า haematocrit tube อื่น ให้กดปุ่มกล้องถ่ายภาพ จากนั้นจะปรากฏหน้ากล้องถ่ายภาพขึ้น ซึ่งผู้ใช้งานสามารถปฏิบัติตามขั้นตอนที่กล่าวมาตั้งแต่ข้อแรกถึงข้อสุดท้ายได้ ตามลำดับ
-            "
-            android:textStyle="bold|normal" />
-
-    </LinearLayout>
-
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
