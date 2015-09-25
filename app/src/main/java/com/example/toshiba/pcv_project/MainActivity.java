@@ -12,7 +12,7 @@ import android.widget.ImageView;
 public class MainActivity extends LogoActivity {
 
     private static final int TAKE_PICTURE = 100;
-    
+
     Button btnLine1;
     Button btnLine2;
     Button btnLine3;
