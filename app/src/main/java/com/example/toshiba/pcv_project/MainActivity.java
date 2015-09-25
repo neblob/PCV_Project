@@ -2,45 +2,52 @@ package com.example.toshiba.pcv_project;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import java.io.File;
+
 public class MainActivity extends LogoActivity {
 
     private static final int TAKE_PICTURE = 100;
+    private static final int REQUEST_TAKE_PHOTO = 101;
 
     Button btnLine1;
     Button btnLine2;
     Button btnLine3;
     Button btnCal;
     LineTouchView lineTouchView;
+    ImageView image;
+    Button btnCapture;
+
+    File photoFile;
+    Uri savedOriginalImageUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnCapture = (Button) findViewById(R.id.button);
-        btnCapture.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, TAKE_PICTURE);
-            }
-        });
-
         initInstances();
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        ImageView image = (ImageView) findViewById(R.id.imageView);
         if (requestCode == TAKE_PICTURE && resultCode == RESULT_OK){
             Bitmap capturedImage = (Bitmap)data.getExtras().get("data");
             image.setImageBitmap(capturedImage);
+            lineTouchView.setMPaint(capturedImage);
+        }
+
+        if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
+            Log.d("app", "result: image uri: " + String.valueOf(Uri.fromFile(photoFile)));
+            savedOriginalImageUri = Uri.fromFile(photoFile);
+
+            galleryAddPic(savedOriginalImageUri);
+            setPic();
         }
     }
     private void initInstances() {
@@ -86,6 +93,5 @@ public class MainActivity extends LogoActivity {
 
         lineTouchView.drawValue(t);
     }
-
 
 }
