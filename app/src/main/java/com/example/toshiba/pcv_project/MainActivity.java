@@ -2,6 +2,7 @@ package com.example.toshiba.pcv_project;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -9,15 +10,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import java.io.File;
+
 public class MainActivity extends LogoActivity {
 
     private static final int TAKE_PICTURE = 100;
+    private static final int REQUEST_TAKE_PHOTO = 101;
 
     Button btnLine1;
     Button btnLine2;
     Button btnLine3;
     Button btnCal;
     LineTouchView lineTouchView;
+    ImageView image;
+    Button btnCapture;
+
+    File photoFile;
+    Uri savedOriginalImageUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +50,14 @@ public class MainActivity extends LogoActivity {
         if (requestCode == TAKE_PICTURE && resultCode == RESULT_OK){
             Bitmap capturedImage = (Bitmap)data.getExtras().get("data");
             image.setImageBitmap(capturedImage);
+        }
+
+        if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
+            Log.d("app", "result: image uri: " + String.valueOf(Uri.fromFile(photoFile)));
+            savedOriginalImageUri = Uri.fromFile(photoFile);
+
+            galleryAddPic(savedOriginalImageUri);
+            setPic();
         }
     }
     private void initInstances() {
